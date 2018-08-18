@@ -1,0 +1,3 @@
+[submodule "HuffmanEncoder"]
+	path = HuffmanEncoder
+	url = https://github.com/cyborgtomato/CBTHuffmanEncoder.git

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ImageWindowController" customModule="JPEGEncoder" customModuleProvider="target">
+            <connections>
+                <outlet property="openBitmapButton" destination="njZ-CM-TNA" id="Gh2-ql-UNe"/>
+                <outlet property="openJPEGButton" destination="uNN-GT-6L0" id="Mqo-HO-E3D"/>
+                <outlet property="progressIndicator" destination="El5-wI-2iw" id="hOM-TD-Rix"/>
+                <outlet property="saveAsJPEGButton" destination="kcm-YQ-Quy" id="vML-bx-H2j"/>
+                <outlet property="scrollView" destination="hDf-wy-by6" id="urx-3G-i2h"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GNe-J0-6Kn">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <subviews>
+                            <customView id="pd5-jQ-Act">
+                                <rect key="frame" x="0.0" y="0.0" width="236.5" height="270"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDf-wy-by6">
+                                        <rect key="frame" x="0.0" y="0.0" width="237" height="270"/>
+                                        <clipView key="contentView" id="uwb-Cf-E9O" customClass="CenteredClipView" customModule="JPEGEncoder" customModuleProvider="target">
+                                            <rect key="frame" x="1" y="1" width="235" height="268"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wnk-aQ-IcR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="220" height="253"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </view>
+                                            </subviews>
+                                        </clipView>
+                                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="7Ku-Qt-qMv">
+                                            <rect key="frame" x="1" y="253" width="235" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="5Fd-Hb-NLx">
+                                            <rect key="frame" x="220" y="1" width="16" height="268"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                    </scrollView>
+                                    <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="El5-wI-2iw">
+                                        <rect key="frame" x="110" y="127" width="16" height="16"/>
+                                    </progressIndicator>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="El5-wI-2iw" firstAttribute="centerY" secondItem="pd5-jQ-Act" secondAttribute="centerY" id="1GQ-bd-CmC"/>
+                                    <constraint firstItem="El5-wI-2iw" firstAttribute="centerX" secondItem="pd5-jQ-Act" secondAttribute="centerX" id="NAB-Wg-o8u"/>
+                                    <constraint firstAttribute="bottom" secondItem="hDf-wy-by6" secondAttribute="bottom" id="exm-om-oea"/>
+                                    <constraint firstAttribute="trailing" secondItem="hDf-wy-by6" secondAttribute="trailing" id="hcQ-6S-3bw"/>
+                                    <constraint firstItem="hDf-wy-by6" firstAttribute="top" secondItem="pd5-jQ-Act" secondAttribute="top" id="hoe-1L-woX"/>
+                                    <constraint firstItem="hDf-wy-by6" firstAttribute="leading" secondItem="pd5-jQ-Act" secondAttribute="leading" id="nWo-M5-w5n"/>
+                                </constraints>
+                            </customView>
+                            <customView id="saM-AI-byl">
+                                <rect key="frame" x="246.5" y="0.0" width="233.5" height="270"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="njZ-CM-TNA">
+                                        <rect key="frame" x="14" y="222" width="205" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SG8-WT-m7O">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="openBitmapButtonTapped:" target="-2" id="i0d-O4-l3k"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uNN-GT-6L0">
+                                        <rect key="frame" x="14" y="189" width="205" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JGr-RG-Q0o">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="openJPEGButtonTapped:" target="-2" id="ewt-Zj-dEt"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kcm-YQ-Quy">
+                                        <rect key="frame" x="14" y="156" width="205" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PNV-2M-1IS">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="saveAsJPEGButtonTapped:" target="-2" id="2rA-eU-VYO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="uNN-GT-6L0" firstAttribute="top" secondItem="njZ-CM-TNA" secondAttribute="bottom" constant="12" id="0J4-uj-b3I"/>
+                                    <constraint firstItem="kcm-YQ-Quy" firstAttribute="leading" secondItem="saM-AI-byl" secondAttribute="leading" constant="20" id="1ET-an-FC3"/>
+                                    <constraint firstItem="kcm-YQ-Quy" firstAttribute="top" secondItem="uNN-GT-6L0" secondAttribute="bottom" constant="12" id="9KQ-2Q-yYY"/>
+                                    <constraint firstItem="njZ-CM-TNA" firstAttribute="top" secondItem="saM-AI-byl" secondAttribute="top" constant="20" id="AGI-ON-7Iu"/>
+                                    <constraint firstAttribute="trailing" secondItem="kcm-YQ-Quy" secondAttribute="trailing" constant="20" id="UMW-yF-21B"/>
+                                    <constraint firstAttribute="trailing" secondItem="uNN-GT-6L0" secondAttribute="trailing" constant="20" id="daP-aV-HtE"/>
+                                    <constraint firstAttribute="trailing" secondItem="njZ-CM-TNA" secondAttribute="trailing" constant="20" id="e8N-g7-hW1"/>
+                                    <constraint firstItem="njZ-CM-TNA" firstAttribute="leading" secondItem="saM-AI-byl" secondAttribute="leading" constant="20" id="hee-ko-8q9"/>
+                                    <constraint firstAttribute="width" constant="250" id="hxC-aS-TPq"/>
+                                    <constraint firstItem="uNN-GT-6L0" firstAttribute="leading" secondItem="saM-AI-byl" secondAttribute="leading" constant="20" id="jJI-jt-EaT"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <holdingPriorities>
+                            <real value="250"/>
+                            <real value="250"/>
+                        </holdingPriorities>
+                    </splitView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="GNe-J0-6Kn" secondAttribute="bottom" id="8M5-Eb-6Pw"/>
+                    <constraint firstAttribute="trailing" secondItem="GNe-J0-6Kn" secondAttribute="trailing" id="C23-7g-dN6"/>
+                    <constraint firstItem="GNe-J0-6Kn" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="uE2-d9-i2C"/>
+                    <constraint firstItem="GNe-J0-6Kn" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="uYA-Nk-K6z"/>
+                </constraints>
+            </view>
+        </window>
+    </objects>
+</document>
