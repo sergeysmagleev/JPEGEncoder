@@ -12,7 +12,7 @@ public enum ParseError : Error {
   case IncorrectFormat
 }
 
-public protocol Parseable {
+public protocol Parseable: Hashable {
   static func parseFromString(stringCode : String) throws -> HuffmanValue<Self>
 }
 

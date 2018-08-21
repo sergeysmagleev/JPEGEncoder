@@ -11,7 +11,7 @@ import Foundation
 
 public func readLines(_ filename : String) throws -> [String] {
   let content = try String(contentsOfFile: filename, encoding: String.Encoding.utf8)
-  return content.components(separatedBy: NSCharacterSet.newlines)
+  return content.components(separatedBy: NSCharacterSet.newlines).filter { !$0.isEmpty }
 }
 
 public func readTable<T : Parseable>(_ lines: [String]) throws -> HuffmanTreeNode<T> {
