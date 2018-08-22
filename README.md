@@ -27,7 +27,7 @@ Run the app. Tap "Open Bitmap" and locate the file you'd like to compress. The a
 Run the app. Tap "Open JPEG" and locate the file you've created in the previous step. Tap "Open". After the image is loaded it's shown in the left section of the window.
 
 ## Contributing
-Want to help the project? Your contribution is greatly appreciated! Submit your pull requests and I will be happy to review them. Bonus points if you tune up the computations and make the algorithm be executed considerably faster.
+Want to help the project? Your contribution is greatly appreciated! Submit your pull requests and I will be happy to review them. Bonus points if you manage to tune up the performance.
 
 ## Readme TODO
 * add implementation details
