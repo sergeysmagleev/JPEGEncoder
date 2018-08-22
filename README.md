@@ -6,19 +6,19 @@ The purpose of this project is to showcase the JPEG algorithm and demonstrate ho
 
 This project is made for fun and for demo purposes only. It's not intended for commercial use, obviously. It's not optimized and works considerably slower than conventional algorithms.
 
-The idea was to make a project that successfully compresses a raw Bitmap image without the use of any Apple's tools for image processing. CoreGraphics is only used once to convert an array of RGB pixels into an `NSImage`.
+The idea was to make a project that successfully compresses a raw Bitmap image without the use of any of Apple's tools for image processing. CoreGraphics is only used once to convert an array of RGB pixels into an `NSImage`.
 
 ## Technical considerations
 The compression level is not adjustable and isn't saved into the file's metadata. The quantization table is hardcoded and if changed after compressing an image, the reverse process will lead to data loss, artifacts and all kinds of unpredictable results.
 
 ## Prerequisites
-Runs only on mac. You'll need Xcode to successfully build it.
+Runs only on Mac. You'll need Xcode to successfully build it.
 
 ## Installation
 1. Clone the repo
 1. Add the submodule `https://github.com/cyborgtomato/CBTHuffmanEncoder.git` to the destination folder `./HuffmanEncoder`. 
 
-If Xcode fails to locate `CBTHuffmanEncoder` project, set the path manually.
+If Xcode fails to locate the `CBTHuffmanEncoder` project, set the path manually.
 
 ## Usage
 ### Compression
