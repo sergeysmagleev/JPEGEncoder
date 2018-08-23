@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   var imageWindowController : ImageWindowController!
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    imageWindowController = ImageWindowController(windowNibName: "ImageWindow")
+    imageWindowController = ImageWindowController(windowNibName: NSNib.Name(rawValue: "ImageWindow"))
     imageWindowController.showWindow(self)
   }
 

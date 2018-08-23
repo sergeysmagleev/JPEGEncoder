@@ -8,7 +8,7 @@
 
 import CBTHuffmanEncoder
 
-public struct Tuple<T : Equatable, U : Equatable> : Equatable, Parseable where T : Parseable, U : Parseable {
+public struct Tuple<T, U> : Parseable where T : Parseable, U : Parseable {
   let a : T
   let b : U
   
