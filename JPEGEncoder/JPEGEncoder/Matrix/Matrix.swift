@@ -106,7 +106,7 @@ public func ==<T : Equatable> (left : Matrix<T>, right : Matrix<T>) -> Bool {
   return true
 }
 
-public func ==<T : Equatable> (left : Matrix<T>, right : Matrix<T>) -> Bool where T : FloatingPoint {
+public func ==<T> (left : Matrix<T>, right : Matrix<T>) -> Bool where T : FloatingPoint {
   if (left.height != right.height || left.width != right.width) {
     return false
   }

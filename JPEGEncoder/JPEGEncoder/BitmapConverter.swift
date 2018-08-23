@@ -80,7 +80,7 @@ public func compressRGBData(_ matrix : Matrix<RGBPixel>) throws -> [ComponentsCh
       print("\(#function) total execution time: \(executionTime)")
     #endif
   }
-  let yCbCrMatrix = try matrix.matrixMap { pixel -> YCbCrPixel in try rgbToYCbCr(pixel: pixel) }
+  let yCbCrMatrix = matrix.matrixMap { pixel -> YCbCrPixel in rgbToYCbCr(pixel: pixel) }
   
   let lumaMatrix = yCbCrMatrix.matrixMap { pixel -> Double in pixel.luminance }
   let chromaBlueMatrix = yCbCrMatrix.matrixMap { pixel -> Double in pixel.chromaBlue }
@@ -185,7 +185,7 @@ public func uncompressRGBData(_ chunks: [QuantizedChunk], rows: Int, cols: Int) 
     }
   }
   
-  let rgbPixels = try pixelMap.map { item in try yCbCrToRGB(pixel: item) }
+  let rgbPixels = pixelMap.map { item in yCbCrToRGB(pixel: item) }
   let rgbPixelMatrix = Matrix(rgbPixels, rows: lumaMatrix.height, cols: lumaMatrix.width)
   
   return rgbPixelMatrix

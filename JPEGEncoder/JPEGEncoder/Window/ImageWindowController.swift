@@ -194,7 +194,7 @@ class ImageWindowController : NSWindowController {
     openPanel.allowsMultipleSelection = false
     openPanel.allowedFileTypes = ["bmp"]
     
-    if (openPanel.runModal() == NSModalResponseOK) {
+    if (openPanel.runModal() == NSApplication.ModalResponse.OK) {
       guard let result = openPanel.url else {
         return
       }
@@ -223,7 +223,7 @@ class ImageWindowController : NSWindowController {
     openPanel.allowsMultipleSelection = false
     openPanel.allowedFileTypes = ["cbt_jpeg"]
     
-    if (openPanel.runModal() == NSModalResponseOK) {
+    if (openPanel.runModal() == NSApplication.ModalResponse.OK) {
       guard let result = openPanel.url else {
         return
       }
@@ -250,7 +250,7 @@ class ImageWindowController : NSWindowController {
     savePanel.canCreateDirectories = false
     savePanel.allowedFileTypes = ["cbt_jpeg"]
     
-    if (savePanel.runModal() == NSModalResponseOK) {
+    if (savePanel.runModal() == NSApplication.ModalResponse.OK) {
       guard let result = savePanel.url else {
         return
       }
